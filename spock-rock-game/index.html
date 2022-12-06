@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spock Rock Game</title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <!-- Header -->
+      <div class="header">
+        <h1>
+          Rock Paper Scissors<br />
+          Lizard Spock
+        </h1>
+      </div>
+      <!-- Player Container -->
+      <div class="player-container" id="player">
+        <h2>
+          You - <span id="player-score">0</span
+          ><span class="choice" id="player-choice"></span>
+        </h2>
+        <i
+          class="far fa-hand-rock"
+          title="Rock"
+          id="player-rock"
+          onclick="checkResult('Rock')"
+        ></i>
+        <i
+          class="far fa-hand-paper"
+          title="Paper"
+          id="player-paper"
+          onclick="checkResult('Paper')"
+        ></i>
+        <i
+          class="far fa-hand-scissors"
+          title="Scissors"
+          id="player-scissors"
+          onclick="checkResult('Scissors')"
+        ></i>
+        <i
+          class="far fa-hand-lizard"
+          title="Lizard"
+          id="player-lizard"
+          onclick="checkResult('Lizard')"
+        ></i>
+        <i
+          class="far fa-hand-spock"
+          title="Spock"
+          id="player-spock"
+          onclick="checkResult('Spock')"
+        ></i>
+      </div>
+      <!-- Computer Container -->
+      <div class="player-container" id="computer">
+        <h2>
+          Computer - <span id="computer-score">0</span
+          ><span class="choice" id="computer-choice"></span>
+        </h2>
+        <i class="far fa-hand-rock" title="Rock" id="computer-rock"></i>
+        <i class="far fa-hand-paper" title="Paper" id="computer-paper"></i>
+        <i
+          class="far fa-hand-scissors"
+          title="Scissors"
+          id="computer-scissors"
+        ></i>
+        <i class="far fa-hand-lizard" title="Lizard" id="computer-lizard"></i>
+        <i class="far fa-hand-spock" title="Spock" id="computer-spock"></i>
+      </div>
+      <!-- Reset icon -->
+      <i
+        class="fas fa-sync-alt reset-icon"
+        title="Reset"
+        onclick="resetAll()"
+      ></i>
+      <!-- Results Text -->
+      <div class="result-container">
+        <h3 class="result-text" id="result-text">Make a choice.</h3>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="confetti.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
